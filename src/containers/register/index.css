@@ -1,0 +1,71 @@
+.register > .title {
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #108ee9;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 3px
+}
+
+.register > .img {
+    text-align: center
+}
+
+.register .input-item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #dddcdc;
+    background-color: white;
+    padding: 7px
+}
+
+.register form {
+    margin: 5px 0
+}
+
+.register .input-item > label,
+.register .input-item > input {
+    display: inline-block
+}
+
+.register .input-item > label {
+    width: 20%;
+    text-align: right
+    /* font-size: 16px */
+}
+
+.register .input-item > input {
+    width: 70%;
+    border: 0;
+    outline: none;
+    font-size: 15px;
+    color: #313030;
+    letter-spacing: 1px
+}
+
+.register .radio {
+    height: 30px;
+    line-height: 30px;
+    padding: 7px
+}
+
+.register .radio > .type {
+    width: 20%;
+    text-align: right;
+    display: inline-block
+}
+
+.register .radio > .radio-group {
+    width: 70%;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.register .radio > .radio-group > .radio-item {
+    width: 50%;
+    float: left;
+    text-align: center
+}
