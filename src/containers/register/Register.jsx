@@ -51,6 +51,7 @@ class Register extends Component {
                 <div className="img">
                     <img src={Logo} alt="df"/>
                 </div>
+                { msg ? <div className='error_msg'>{msg}</div> : null}
                 <form action="">
                     <div className="input-item">
                         <label htmlFor="">用户名</label>
@@ -78,7 +79,6 @@ class Register extends Component {
                     <Button type="primary" onClick={this.register}>注册</Button>
                 </form>
                 <Button type="ghost" href="#/login">已有账户</Button>
-                { msg ? <div className='error_msg'>{msg}</div> : null}
             </div>
         );
     }

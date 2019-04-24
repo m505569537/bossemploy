@@ -1,5 +1,44 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+html, body {
+    height: 100%;
+    background-color: rgba(226, 224, 224,.8)
+}
+
+.container {
+    height: 100%;
+}
+
+
+.container header {
+    background-color: #6abf47;
+    text-align: center;
+    color: white;
+    padding: 10px
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%
+}
+
 .error_msg {
     color: red;
     text-align: center;
     font-size: 18px
+}
+
+.am-list-item .am-input-label,
+.am-list-item .am-input-control input,
+.am-textarea-label,
+.am-textarea-control textarea{
+    font-size: 15px
+}
+
+.am-card.am-card-full {
+    margin: 8px
 }
