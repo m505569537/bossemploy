@@ -26,6 +26,8 @@
 + /home/laoban  老板主界面
 + /home/dashen-info  大神信息完善页面
 + /home/laoban-info  老板信息完善页面
++ /home/personal  个人中心
++ /home/message  信息中心
 
 # 引入依赖
 ## 引入antd-mobile，并实现按需打包
@@ -44,3 +46,16 @@
 > npm i -S redux react-redux redux-thunk 
 
 > npm i --save-dev redux-devtools-extension
+
+# 模块划分
+
+## 登陆模块
++ 手动登陆
++ 自动登陆 
+利用cookie实现自动登陆功能
+
+## 注册模块
+
+## 聊天模块
+
+## 登出模块

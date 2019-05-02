@@ -4,7 +4,9 @@ import {
     AUTH_SUCCESS,
     ERROR_MSG,
     UPDATE_SUCCESS,
-    UPDATE_ERROR
+    UPDATE_ERROR,
+    RECEIVE_MSG_LIST,
+    RECEIVE_MSG
 } from './action-types'
 
 import { redirectTo } from '../utils'
@@ -34,6 +36,29 @@ function user(state=initUser, action) {
     }
 }
 
+const initChat = {
+    users: {},
+    chatMsgs: [],
+    unReadCount: 0
+}
+
+//产生聊天状态的reducer
+function chat(state=initChat, action) {
+    switch (action.type) {
+        case RECEIVE_MSG_LIST:
+            return { ...action.data, unReadCount:0 }
+        case RECEIVE_MSG:
+            return {
+                users: state.users,
+                chatMsgs: [...state.chatMsgs, action.data], //不可以使用push，因为那会改变原先的状态
+                unReadCount: state.unReadCount
+            }
+        default:
+            return state
+    }
+}
+
 export default combineReducers({
-    user
+    user,
+    chat
 })

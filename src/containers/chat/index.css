@@ -1,0 +1,31 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%
+}
+
+.chat header  span {
+    height: 44px;
+    width: 44px;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    font-size: 32px
+}
+
+.chat .am-list-item img {
+    border-radius: 50%
+}
+
+.chat .am-list-item .am-list-line .am-list-content {
+    font-size: 15px
+}
+
+.chat-me .am-list-line .am-list-content {
+    text-align: right
+}
+
+.chat-me .am-list-line .am-list-extra {
+    flex-basis: auto;
+    margin-left: 10px;
+}

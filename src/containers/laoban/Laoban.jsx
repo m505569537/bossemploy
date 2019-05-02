@@ -3,8 +3,7 @@ import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
 import Lbitem from './Lbitem'
-import { reqDashen } from '../../api/index'
-import './index.css'
+import { reqIndex } from '../../api/index'
 
 class Laoban extends Component {
 
@@ -14,7 +13,7 @@ class Laoban extends Component {
 
     async componentDidMount () {
         //本人是老板，那么自然想要获得大神列表了
-        const res = await reqDashen()
+        const res = await reqIndex('laoban')
         const result = res.data
         this.setState({
             dslist: result.data
@@ -23,7 +22,13 @@ class Laoban extends Component {
 
     noDashen = () => 
         (
-            <div>大神跟着小学妹跑啦</div>
+            <div className='loading'>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         )
 
     qifei = () => 

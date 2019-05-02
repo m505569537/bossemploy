@@ -4,7 +4,6 @@ import { Redirect } from 'react-router-dom'
 
 import Dsitem from './Dsitem'
 import { reqLaoban } from '../../api/index'
-import './index.css'
 
 class Dashen extends Component {
 
@@ -23,7 +22,13 @@ class Dashen extends Component {
 
     noLaoban = () => 
         (
-            <div>老板们都带着小姨子跑啦</div>
+            <div className='loading'>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         )
 
     meipao = () => 

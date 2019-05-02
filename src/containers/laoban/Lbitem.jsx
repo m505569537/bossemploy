@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import { Card } from 'antd-mobile'
+import { withRouter } from 'react-router-dom'
 
 class Lbitem extends Component {
 
@@ -9,10 +10,10 @@ class Lbitem extends Component {
     }
 
     render() {
-        const { header, info, post, username} = this.props.user
+        const { header, info, post, username, _id} = this.props.user
         // console.log(header[2]);
         return (
-            <Card>
+            <Card full onClick={() => this.props.history.push(`/home/chat/${_id}`)}>
                 <Card.Header
                     thumb={require(`../../assets/image/header/${header[2]}.jpg`)}
                     thumbStyle={{width:'60px',borderRadius:'50%'}}
@@ -29,4 +30,4 @@ class Lbitem extends Component {
     }
 }
 
-export default Lbitem;
+export default withRouter(Lbitem)

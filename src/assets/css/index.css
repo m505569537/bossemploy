@@ -3,6 +3,12 @@
     padding: 0
 }
 
+/* 清除全局的滚动条 */
+::-webkit-scrollbar {
+    display: none
+}
+
+
 html, body {
     height: 100%;
     background-color: rgba(226, 224, 224,.8)
@@ -13,17 +19,26 @@ html, body {
 }
 
 
-.container header {
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color: #6abf47;
     text-align: center;
     color: white;
-    padding: 10px
+    padding: 10px 0;
+    z-index:9999
+}
+
+.laoban, .dashen, .message, .personal, .chat {
+    padding: 44px 0 50px 0 
 }
 
 .footer {
     position: fixed;
     bottom: 0;
-    width: 100%
+    width: 100%;
+    z-index: 99
 }
 
 .error_msg {
@@ -40,5 +55,50 @@ html, body {
 }
 
 .am-card.am-card-full {
-    margin: 8px
+    margin: 8px;
+}
+
+/* 实现loading动画 */
+.loading{
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center
+}
+
+.loading span{
+    display: inline-block;
+    width: 8px;
+    height: 100%;
+    border-radius: 4px;
+    margin: 0 2px;
+    background: lightgreen;
+    -webkit-animation: load 1s ease infinite;
+}
+
+@-webkit-keyframes load{
+    0%,100%{
+        height: 40px;
+        background: lightgreen;
+    }
+    50%{
+        height: 70px;
+        margin: -15px 2px;
+        background: lightblue;
+    }
+}
+.loading span:nth-child(2){
+    -webkit-animation-delay:0.2s;
+}
+.loading span:nth-child(3){
+    -webkit-animation-delay:0.4s;
+}
+.loading span:nth-child(4){
+    -webkit-animation-delay:0.6s;
+}
+.loading span:nth-child(5){
+    -webkit-animation-delay:0.8s;
 }

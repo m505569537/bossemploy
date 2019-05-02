@@ -14,11 +14,10 @@ import Personal from '../personal/Personal';
 import Dashen from '../dashen/Dashen';
 import Laoban from '../laoban/Laoban';
 import Message from '../message/Message';
+import Chat from '../chat/Chat';
 
 class Home extends Component {
 
-    
-    
 
     componentDidMount () {
         //当cookie存在，而用户为登陆时，向后台请求user数据
@@ -97,6 +96,7 @@ class Home extends Component {
                     <Route path='/home/dashen' component={Dashen} />
                     <Route path='/home/laoban' component={Laoban} />
                     <Route path='/home/message' component={Message} />
+                    <Route path='/home/chat/:userid' component={Chat} />
                 </Switch>
                 {headtitle ? (<Footer list={list} />) : null}
             </div>
