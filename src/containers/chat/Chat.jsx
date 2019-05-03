@@ -6,7 +6,6 @@ import './index.css'
 import { sendMsg } from '../../redux/actions'
 
 const Item = List.Item
-
 class Chat extends Component {
 
     state = {
@@ -63,6 +62,7 @@ class Chat extends Component {
                 <section>
                     {
                         list.map( item => {
+                            item.read = true
                             if(item.from===targetid){
                                 return (
                                     <Item
