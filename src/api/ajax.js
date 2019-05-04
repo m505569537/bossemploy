@@ -15,8 +15,8 @@ export default function ajax (url, data={}, type='GET'){
         if(paramStr){
             paramStr = paramStr.substring(0,paramStr.length-1)
         }
-        return axios.get(url + '?' + paramStr)
+        return axios.get('/api' + url + '?' + paramStr)
     } else {
-        return axios.post(url, data)
+        return axios.post('/api' + url, data)
     }
 }

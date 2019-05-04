@@ -119,7 +119,7 @@ function initIO (dispatch,userid) {
     //如果socket对象不存在，则创建连接，否则不重新创建连接对象
     if(!io.socket){
         //连接服务器，创建socket对象
-        io.socket = io('ws://106.13.144.87:8089')
+        io.socket = io('http://106.13.144.87:8089')
         //绑定监听，接收服务器发送的消息
         io.socket.on('receiveMsg', function (data) {
             // console.log('客户端接受服务器发送的消息', data);
